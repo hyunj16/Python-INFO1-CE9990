@@ -37,7 +37,7 @@ while choice == "y":
     try:
         daysaweek = int(input3)
     except ValueError:
-        print("I will assume you don't work a day.")
+        print("I guess you don't work.")
         daysaweek = 1
     print(daysaweek)
     
