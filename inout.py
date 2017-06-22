@@ -7,19 +7,19 @@ while choice == "y":
     print()
 
     try:
-        input1 = input("What is your hourly rate? \t$ ")
+        input1 = input("What is your hourly rate?\t$ ")
     except EOFError:
         sys.exit(0)
 
     try:
         hourlyrate = float(input1)
     except ValueError:
-        print("You must be an unpaid-intern. $0 / hour.d")
+        print("You must be an unpaid-intern. $0 / hour")
         hourlyrate = 0
     print(hourlyrate)
 
     try:
-        input2 = input("How many hours a day do you work? \t")
+        input2 = input("How many hours a day do you work?\t")
     except EOFError:
         sys.exit(0)
     try:
@@ -30,7 +30,7 @@ while choice == "y":
     print(hoursaday)
     
     try:
-        input3 = input("How many days do you work in a week? \t")
+        input3 = input("How many days do you work in a week?\t")
     except EOFError:
         sys.exit(0)
 
@@ -43,11 +43,11 @@ while choice == "y":
     
     weeksinayear = 52
 
-    salary = hourlyrate*daysaweek*hoursaday*weeksinayear
+    salary = hourlyrate * daysaweek * hoursaday * weeksinayear
     print(salary)
     salaryinK = salary/1000
     print(salaryinK)
-    salaryinthousands = int(round(salaryinK, 0))
+    salaryinthousands = int(salaryinK)
     
 
     print("Your salary is about ", "$ ", salaryinthousands, "K." , sep="")
