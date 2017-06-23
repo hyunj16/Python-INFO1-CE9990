@@ -1,9 +1,9 @@
 import sys
 
-r = int(7)#int(input("How many rows of boxes?\t"))
-c = int(5)#int(input("How many columns of boxes?\t"))
-rb = int(4)#int(input("How many rows of blanks in each boxes?\t"))
-cb = int(3)#int(input("How many columns of blanks in each boxes?\t"))
+r = int(input("How many rows of boxes?\t"))
+c = int(input("How many columns of boxes?\t"))
+rb = int(input("How many rows of blanks in each boxes?\t"))
+cb = int(input("How many columns of blanks in each boxes?\t"))
 
 a = str("+")
 b = str("-")
