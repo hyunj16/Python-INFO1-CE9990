@@ -5,47 +5,43 @@ c = int(input("How many columns of boxes?\t"))
 rb = int(input("How many rows of blanks in each boxes?\t"))
 cb = int(input("How many columns of blanks in each boxes?\t"))
 
-a = str("+")
-b = str("-")
-d = str("|")
-e = str(" ")
+plus = ("+")
+dash = ("-")
+bar = ("|")
+space = (" ")
 
 h = 1
 while h <= c:
     
     j = 1
     while j <= r:
-        print(a, end="")
-
-        k = 1
-        while k <= cb:
-            print(b, end="")
-            k += 1
+        print(plus, end="")
+        print(cb*dash, end="")
 
         j += 1
-    print(a)
+    print(plus)
 
     l = 1
     while l <= rb:
         i = 1
         while i <= r:
-            print(d, end="")
-            print(cb*e, end="")
+            print(bar, end="")
+            print(cb*space, end="")
             i += 1
-        print(d)
+        print(bar)
         l += 1
     
     h += 1
 
 m = 1
 while m <= r:
-    print(a, end="")
+    print(plus, end="")
 
     n = 1
     while n <= cb:
-        print(b, end="")
+        print(dash, end="")
         n += 1
     m += 1
-print(a)
+print(plus)
     
 sys.exit(0)
