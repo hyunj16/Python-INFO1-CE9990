@@ -1,3 +1,10 @@
+"""
+graphpaper.py
+
+Print "+", "-", "|", " " to draw a graph.
+
+"""
+
 import sys
 
 r = int(input("How many rows of boxes?\t"))
@@ -17,7 +24,6 @@ while h <= c:
     while j <= r:
         print(plus, end="")
         print(cb*dash, end="")
-
         j += 1
     print(plus)
 
@@ -30,17 +36,12 @@ while h <= c:
             i += 1
         print(bar)
         l += 1
-    
     h += 1
 
 m = 1
 while m <= r:
     print(plus, end="")
-
-    n = 1
-    while n <= cb:
-        print(dash, end="")
-        n += 1
+    print(cb*dash, end="")
     m += 1
 print(plus)
     
