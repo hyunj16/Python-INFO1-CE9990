@@ -7,10 +7,27 @@ Print "+", "-", "|", " " to draw a graph.
 
 import sys
 
-r = int(input("How many rows of boxes?\t"))
-c = int(input("How many columns of boxes?\t"))
-rb = int(input("How many rows of blanks in each boxes?\t"))
-cb = int(input("How many columns of blanks in each boxes?\t"))
+def getInt(ask):
+    assert isinstance(ask, str)
+    while True:
+        try:
+            inputvalue = input(ask)
+        except EOFError:
+            sys.exit(0)
+
+        try:
+            i = int(inputvalue)
+        except ValueError:
+            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            continue #Go back up to the word "while"
+
+        return i
+
+
+r = getInt("How many rows of boxes?\t")
+c = getInt("How many columns of boxes?\t")
+rb = getInt("How many rows of blanks in each boxes?\t")
+cb = getInt("How many columns of blanks in each boxes?\t")
 
 plus = ("+")
 dash = ("-")
