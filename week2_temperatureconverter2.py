@@ -26,7 +26,7 @@ def getInt(ask):
         try:
             i = int(inputvalue)
         except ValueError:
-            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            print("Sorry,", inputvalue, "is not an integer.")
             continue
         return i
 
@@ -40,7 +40,7 @@ def getFloat(ask):
         try:
             i = float(inputvalue)
         except ValueError:
-            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            print("Sorry,", inputvalue, "is not a float.")
             continue
         return i
 
@@ -53,46 +53,37 @@ def getconversionchoice():
         print("Sorry, ", conversionchoice, " is not a valid choice.", sep="")
 
     print()
-    print("You chose ", conversionchoice, " as your choice.", sep="")
+    print("You chose", conversionchoice, "as your choice.")
     return conversionchoice
 
 def choice1():
     print(conversionchoice, ". We will now convert Fahrenheit to Celsius.", sep="")
     print()
-    while True:
+    if True:
         inputfahrenheit = getFloat("What is the temperature in Fahrenheit?\t")
         outputcelsius = (inputfahrenheit - 30) / 2
         #inputfahrenheit = int(inputfahrenheit)
         #outputcelsius = int(outputcelsius)
-        celsiusoutput = str("{} degrees in Fahrenheit is {:3} degrees in Celsius.".format(inputfahrenheit, outputcelsius))
-        celsiusoutputlength = len(celsiusoutput)
-        printoutcome(celsiusoutput, celsiusoutputlength)
-        break
+        celsiusoutput = "{} degrees in Fahrenheit is {:3} degrees in Celsius.".format(inputfahrenheit, outputcelsius)
+        printoutcome(celsiusoutput)
 
 def choice2():
     print(conversionchoice, ". We will now convert Celsius to Fahrenheit.", sep="")
     print()
-    while True:
+    if True:
         inputcelsius = getFloat("What is the temperature in Celsius?\t")
         outputfahrenheit = inputcelsius * 2 + 30
         #inputcelsius = int(inputcelsius)
         #outputfahrenheit = int(outputfahrenheit)
-        fahrenheitoutput = str("{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit))
-        fahrenheitoutputlength = len(fahrenheitoutput)
-        printoutcome(fahrenheitoutput, fahrenheitoutputlength)
-        break
+        fahrenheitoutput = "{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit)
+        printoutcome(fahrenheitoutput)
 
-def printoutcome(a, b):
-    counter = 0
-    while counter < b:
-        print(a[counter], end="")
-        counter += 1
-    print()
+def printoutcome(a):
+    print(a)
     print()
     
 def closing():
-    closingvalue = input("Enter \"Y\" to continue:\t")
-    return closingvalue
+    return input("Enter \"Y\" to continue:\t")
     
 processchoice = "y"
 while processchoice == "y":
@@ -104,6 +95,7 @@ while processchoice == "y":
     else:
         choice2()
     
-    processchoice = str.lower(closing())
+    processchoice = closing().lower()
 
+print()
 print("You didn't enter \"Y\". Thank you for using. Good-bye.")
