@@ -35,7 +35,7 @@ def getFloat(ask):
             continue
         return i
 
-def printoutcome(a, b):
+def printoutcome(a):
     print(a)
     print()
     
@@ -74,5 +74,5 @@ else:
         #inputcelsius = int(inputcelsius)
         #outputfahrenheit = int(outputfahrenheit)
         fahrenheitoutput = "{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit)
-        printoutcome(fahrenheitoutcome)
+        printoutcome(fahrenheitoutput)
 
