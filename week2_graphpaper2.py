@@ -18,7 +18,7 @@ def getInt(ask):
         try:
             i = int(inputvalue)
         except ValueError:
-            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            print("Sorry,", inputvalue, "is not an integer.")
             continue #Go back up to the word "while"
 
         return i
