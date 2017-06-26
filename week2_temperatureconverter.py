@@ -17,7 +17,7 @@ def getInt(ask):
         try:
             i = int(inputvalue)
         except ValueError:
-            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            print("Sorry,", inputvalue, "is not an integer.")
             continue
         return i
 
@@ -31,16 +31,12 @@ def getFloat(ask):
         try:
             i = float(inputvalue)
         except ValueError:
-            print("Sorry, ", inputvalue, " is not an integer.", sep="")
+            print("Sorry,", inputvalue, "is not a float.")
             continue
         return i
 
 def printoutcome(a, b):
-    counter = 0
-    while counter < b:
-        print(a[counter], end="")
-        counter += 1
-    print()
+    print(a)
     print()
     
 print("Conversion of Temperature")
@@ -56,7 +52,7 @@ while True:
     print("Sorry, ", conversionchoice, " is not a valid choice.", sep="")
 
 print()
-print("You chose ", conversionchoice, " as your choice.", sep="")
+print("You chose", conversionchoice, "as your choice.")
 
 if conversionchoice == 1:
     print(conversionchoice, ". We will now convert Fahrenheit to Celsius.", sep="")
@@ -66,10 +62,8 @@ if conversionchoice == 1:
         outputcelsius = (inputfahrenheit - 30) / 2
         #inputfahrenheit = int(inputfahrenheit)
         #outputcelsius = int(outputcelsius)
-        celsiusoutput = str("{} degrees in Fahrenheit is {:3} degrees in Celsius.".format(inputfahrenheit, outputcelsius))
-        celsiusoutputlength = len(celsiusoutput)
-        printoutcome(celsiusoutput, celsiusoutputlength)
-        continue
+        celsiusoutput = "{} degrees in Fahrenheit is {:3} degrees in Celsius.".format(inputfahrenheit, outputcelsius)
+        printoutcome(celsiusoutput)
     
 else:
     print(conversionchoice, ". We will now convert Celsius to Fahrenheit.", sep="")
@@ -79,9 +73,6 @@ else:
         outputfahrenheit = inputcelsius * 2 + 30
         #inputcelsius = int(inputcelsius)
         #outputfahrenheit = int(outputfahrenheit)
-        fahrenheitoutput = str("{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit))
-        fahrenheitoutputlength = len(fahrenheitoutput)
-        printoutcome(fahrenheitoutput, fahrenheitoutputlength)
-        continue
+        fahrenheitoutput = "{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit)
+        printoutcome(fahrenheitoutcome)
 
-sys.exit(1)
