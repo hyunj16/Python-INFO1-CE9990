@@ -61,7 +61,7 @@ def choice1():
     print()
     if True:
         inputfahrenheit = getFloat("What is the temperature in Fahrenheit?\t")
-        outputcelsius = (inputfahrenheit - 30) / 2
+        outputcelsius = (inputfahrenheit - 32) / 1.8
         #inputfahrenheit = int(inputfahrenheit)
         #outputcelsius = int(outputcelsius)
         celsiusoutput = "{} degrees in Fahrenheit is {:3} degrees in Celsius.".format(inputfahrenheit, outputcelsius)
@@ -72,7 +72,7 @@ def choice2():
     print()
     if True:
         inputcelsius = getFloat("What is the temperature in Celsius?\t")
-        outputfahrenheit = inputcelsius * 2 + 30
+        outputfahrenheit = inputcelsius * 1.8 + 32
         #inputcelsius = int(inputcelsius)
         #outputfahrenheit = int(outputfahrenheit)
         fahrenheitoutput = "{} degrees in Celsius is {:3} degrees in Fahrenheit.".format(inputcelsius, outputfahrenheit)
