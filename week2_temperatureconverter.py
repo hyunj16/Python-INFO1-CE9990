@@ -1,5 +1,5 @@
 """
-temperatureconverter.py
+week2_temperatureconverter.py
 
 Calculating simple math to convert units while using functions and write-on effect to show results
 """
