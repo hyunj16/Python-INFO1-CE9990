@@ -1,7 +1,7 @@
 """
 tkflag.py
 
-Draw the United States flag in color on a tkinter Canvas widget.
+Draw the Greece flag in color on a tkinter Canvas widget.
 """
 
 import tkinter              #in Python2, the t was uppercase
@@ -11,7 +11,7 @@ stripeHeight = 40           #height of each stripe
 
 #The root widget is the window that will contain everything we draw.
 root = tkinter.Tk()
-root.title("United States Flag")
+root.title("Greek Flag")
 
 #dimensions of entire flag, in pixels
 height = 9 * stripeHeight  #9 stripes
