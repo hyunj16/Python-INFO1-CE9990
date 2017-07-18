@@ -1,3 +1,9 @@
+"""
+week3_forloop_graphpaper.py
+
+Graph Paper assignment using for loop.
+"""
+
 import sys
 
 def getInt(ask):
@@ -12,7 +18,7 @@ def getInt(ask):
             i = int(inputvalue)
         except ValueError:
             print("Sorry,", inputvalue, "is not an integer.")
-            continue #"Go back up to the word "while"
+            continue #Go back up to the word "while"
 
         return i
 
@@ -27,27 +33,27 @@ bar = ("|")
 space = (" ")
 
 
-for k in range(0, r):
+for k in range(r):
     
     #Plus and Dash
-    for h in range(0, c):
+    for h in range(c):
         print(plus, end="")
-        for j in range(0, rb):
+        for j in range(cb):
             print(dash, end="")
     print(plus)
 
     #Bar and Spaces
-    for n in range(0, cb):
-        for l in range(0, c):
+    for n in range(rb):
+        for l in range(c):
             print(bar, end="")
-            for m in range(0, rb):
+            for m in range(cb):
                 print(space, end="")    
         print(bar)
 
 #Last Line
-for o in range(0, c):
+for o in range(c):
     print(plus, end="")
-    for p in range(0, rb):
+    for p in range(cb):
         print(dash, end="")
 print(plus)
         
