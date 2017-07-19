@@ -67,7 +67,7 @@ while askchoice == "y":
     inputnumber = int(input("Please enter a number:\t"))
     while inputnumber > 4000 or inputnumber <= 0:
         print()
-        print("Numbers are out of range for Roman Numerals.")
+        print("Your number is out of range for Roman Numerals.")
         print("Please enter a number between 1 and 3999.")
         inputnumber = int(input("Please enter a number:\t"))
         continue
