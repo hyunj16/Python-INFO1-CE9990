@@ -30,57 +30,29 @@ def getInt(ask):
             continue
         return i
 
+numerals = [
+    [1000, "M"],
+    [ 900, "CM"],
+    [ 500, "D"],
+    [ 400, "CD"],
+    [ 100, "C"],
+    [  90, "XC"],
+    [  50, "L"],
+    [  40, "XL"],
+    [  10, "X"],
+    [   9, "IX"],
+    [   5, "V"],
+    [   4, "IV"],
+    [   1, "I"]
+]
+
 def calculation(number):
     roman = ""
-    while number >= 1000:
-        number -= 1000
-        roman += "M"
-        #printoutcome(year, roman)
-    while number >= 900:
-        number -= 900
-        roman += "CM"
-        #printoutcome(year, roman)
-    while number >= 500:
-        number -= 500
-        roman += "D"
-        #printoutcome(year, roman)
-    while number >= 400:
-        number -= 400
-        roman += "CD"
-        #printoutcome(year, roman)
-    while number >= 100:
-        number -= 100
-        roman += "C"
-        #printoutcome(year, roman)
-    while number >= 90:
-        number -= 90
-        roman += "XC"
-        #printoutcome(year, roman)
-    while number >= 50:
-        number -= 50
-        roman += "L"
-        #printoutcome(year, roman)
-    while number >= 40:
-        number -= 40
-        roman += "XL"
-        #printoutcome(year, roman)
-    while number >= 10:
-        number -= 10
-        roman += "X"
-        #printoutcome(year, roman)
-    while number >= 5:
-        number -= 5
-        roman += "V"
-        #printoutcome(year, roman)
-    while number >= 4:
-        number -= 4
-        roman += "IV"
-        #printoutcome(year, roman)
-    while number >= 1:
-        number -= 1
-        roman += "I"
-        #printoutcome(year, roman)
-    return(roman)
+    for numeral in numerals:
+        while number >= numeral[0]:
+            number -= numeral[0]
+            roman += numeral[1]
+    return roman
     
 def results(c, d):
     print("You entered ", c, ", and its roman numeral is \"", d, "\".", sep="")
