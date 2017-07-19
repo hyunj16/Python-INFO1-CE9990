@@ -60,22 +60,28 @@ def results(c, d):
 
 #Welcome Message
 opening()
+askchoice = "y"
 
-#Values
-inputnumber = int(input("Please enter a number:\t"))
-if inputnumber > 4000 or inputnumber <= 0:
-    print()
-    print("Numbers are out of range for Roman Numerals.")
-    print("Please enter a number between 1 and 3999.")
+while askchoice == "y":
+    #Values
     inputnumber = int(input("Please enter a number:\t"))
-else:
+    while inputnumber > 4000 or inputnumber <= 0:
+        print()
+        print("Numbers are out of range for Roman Numerals.")
+        print("Please enter a number between 1 and 3999.")
+        inputnumber = int(input("Please enter a number:\t"))
+        continue
     initialroman = ""
     initialnumber = inputnumber
 
     #Processing Roman Numeral
     romanoutput = calculation(inputnumber)
 
-#Print Outcome
-results(initialnumber, romanoutput)
+    #Print Outcome
+    results(initialnumber, romanoutput)
+    print("Would you like to convert another number?")
+    askchoice = str.lower(input("Please enter \"Y\" to continue:\t"))
+print("You didn't \"Y\".")
+print("Thanks for using. Good bye.")
 
 sys.exit(0)
