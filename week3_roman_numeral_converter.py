@@ -70,7 +70,7 @@ while askchoice == "y":
         print("Your number is out of range for Roman Numerals.")
         print("Please enter a number between 1 and 3999.")
         inputnumber = int(input("Please enter a number:\t"))
-        continue
+        
     initialroman = ""
     initialnumber = inputnumber
 
