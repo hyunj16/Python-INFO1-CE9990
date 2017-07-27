@@ -36,14 +36,10 @@ def findvowels(wordinput1):
     ]
     wordinput1[0]
     #print(wordinput[0])
-    for i, vowel in enumerate(vowels):
-        if wordinput1[0] == vowel:
-            #print("The same.")
-            returnvalue = 1
-            break
-        else:
-            returnvalue = 0
-    return (returnvalue)
+    if wordinput1[0] in "aeiou":
+        return 1
+    else:
+        return 0
 
 #Search for the first vowel in a word
 def findmultipleconsonant(wordinput2):
