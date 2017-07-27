@@ -73,11 +73,10 @@ def findmultipleconsonant(wordinput2):
     return i-1
 
 def processing(choice, initialword):
-    if choice == 1:
+    consonantplacement = findmultipleconsonant(initialword)
+    if consonantplacement == 0:
         initialword = initialword + "way"
     else:
-        consonantplacement = findmultipleconsonant(initialword)
-        #print(consonantplacement)
         initialword = initialword[consonantplacement:] + initialword[:consonantplacement] + "ay"
     return initialword
 
