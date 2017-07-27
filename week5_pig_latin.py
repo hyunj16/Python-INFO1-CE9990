@@ -27,19 +27,7 @@ def getStr(ask):
 
 #Search first letter for a vowel
 def findvowels(wordinput1):
-    vowels = [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u"
-    ]
-    wordinput1[0]
-    #print(wordinput[0])
-    if wordinput1[0] in "aeiou":
-        return 1
-    else:
-        return 0
+    return 1 if wordinput1[0] in "aeiou" else 0
 
 #Search for the first vowel in a word
 def findmultipleconsonant(wordinput2):
