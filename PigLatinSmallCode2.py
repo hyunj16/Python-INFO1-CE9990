@@ -1,8 +1,4 @@
-"""
-PigLatinSmallCode2.py
 
-Testing 
-"""
 import sys
 
 s = "today"
@@ -10,8 +6,7 @@ s = "today"
 def findmultipleconsonant(wordinput2):
     i = 0
     wordlength = len(wordinput2)
-    check = 0
-    while i < wordlength and check == 0:
+    while i < wordlength:
         print(wordinput2[i])
         n = 0
         currentword = wordinput2[i]
@@ -24,16 +19,14 @@ def findmultipleconsonant(wordinput2):
                 "u"
             ]
             vowel = vowels[n]
-            print(vowel)
             if currentword == vowel:
                 print("FOUND IT.")
-                check = 1
-                break
+                return i   #instead of the break
             n += 1
         i += 1
-    return i-1
+    print("The word contains no vowels.")
+    return -1
 
 testing = findmultipleconsonant(s)
 print(testing)
-
 sys.exit(0)
