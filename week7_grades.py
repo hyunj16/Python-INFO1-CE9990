@@ -5,7 +5,7 @@ week7_grades.py
 Take in user input of test scores to a list and outputs a letter grade.
 Tried to use "append" list, and "return" results with "function"
 """
-
+import sys
 def opening():
     print()
     print("Welcome to Letter Grade Calculator.")
@@ -83,3 +83,5 @@ while check == "y":
     
 print("You didn't enter \"Y\".")
 print("Good-bye.")
+
+sys.exit(0)
