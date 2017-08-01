@@ -7,6 +7,7 @@ Tried to use "append" list, and "return" results with "function"
 """
 
 import sys
+
 def opening():
     print()
     print("Welcome to Letter Grade Calculator.")
