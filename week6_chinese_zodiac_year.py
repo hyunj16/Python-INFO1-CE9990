@@ -1,7 +1,7 @@
 """
 week6_chinese_zodiac_year.py
 
-Loop through the items in a list.
+Tuple and dictionary
 """
 
 import sys
