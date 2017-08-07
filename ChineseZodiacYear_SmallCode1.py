@@ -90,14 +90,21 @@ animalnumber = int(input("Enter corresponding numbers to get lucky numbers:\t"))
 
 luckynumbers = animals[animalnumber][1]["luckynumbers"]
 
+s = ""
+for i in range(len(luckynumbers)-2):
+    s += str(luckynumbers[i]) + ", "
+
+s += str(luckynumbers[-2]) + " and " + str(luckynumbers[-1])
+print(s)
+
+"""
 print("Lucky numbers:\t", end="")
 
-i = 0
-
-while i < len(luckynumbers)-2:
+for i in range(len(luckynumbers)-2):
     written = luckynumbers[i]
     print(written, ", ", sep="", end="")
-    
-    i += 1
-print(luckynumbers[len(luckynumbers)-2], " and ", luckynumbers[len(luckynumbers)-1], sep="")
+
+print(luckynumbers[-2], " and ", luckynumbers[-1], sep="")
+"""
+
 print()
