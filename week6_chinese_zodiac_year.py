@@ -56,11 +56,13 @@ def getKey(ask2):
             continue
         return h
     
-def writtenformat(rawtuple):
-    numberslength = checklength(rawtuple)
-    #print(numberslength)
-    writtentuple = str(rawtuple[:numberslength-1]) + " and " + str(rawtuple[-1])
-    return writtentuple
+def writtenformat(numbersets):
+    s = ""
+    for i in range(len(numbersets)-2):
+        s += str(numbersets[i]) + ", "
+
+    s += str(numbersets[-2]) + " and " + str(numbersets[-1])
+    return s
     
 def checklength(alist):
     lengthvalue = len(alist)
